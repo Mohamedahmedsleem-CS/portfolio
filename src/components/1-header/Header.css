@@ -1,0 +1,162 @@
+/* =======================
+   table of contents
+   =======================
+   1- Header
+   2- Button & Icon
+   3- Modal
+   4- Media Query
+ */
+
+
+
+
+/* ======================
+      1- Header
+   ====================== */
+
+header.flex{
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  margin-top: 1.2rem;
+}
+header.flex nav{
+  background-color: var(--bgHeader);
+  padding: 0.77rem 1.6rem;
+  border-radius: 55px;
+  box-shadow: 1px 1px 40px rgb(49,48,48,0.292);
+}
+header ul.flex {
+  gap: 16px;
+}
+
+header ul li a{
+  color: var(--title);
+  opacity: .9;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+header ul li a:hover{
+  color: var(--blue);
+  opacity: 1;
+  font-size: 0.9rem;
+  transition: 0.2s;
+
+}
+header button{
+  font-size: 1.2rem;
+
+}
+
+header button.menu{
+  display: none;
+}
+
+
+
+/* =============================
+      2- Button & Icon
+   ============================= 
+*/
+
+
+header .icon-menu, header button.mode{
+  background-color: var(--bgHeader);
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 50%;
+  
+  text-align: center;
+  justify-content: center;
+  color: var(--subtitle);
+  border: solid 1px rgba(244, 165,96,0.249);
+  transition: 0.2s;
+}
+
+header .icon-menu:hover, header button.mode:hover{
+  color: var(--title);
+  border: solid 1px rgb(244, 165,96);
+}
+
+header .icon-clear{
+  font-size: 1.5rem;
+  color: var(--subtitle);
+  transition: 0.3s;
+}
+
+header .icon-clear:hover{
+  font-size: 1.9rem;
+  color: crimson;
+  rotate: 180deg;
+}
+
+
+
+
+/* =============================
+      3- Modal
+   ============================= 
+*/
+header .fixed{
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background-color: rgba(40,40,48,0.81);
+}
+
+@keyframes mymove {
+  0% {scale: 0;}
+  60% {scale: 1.2;}
+  100% {scale: 1;}
+}
+
+header .fixed ul.modal {
+  animation: mymove .8s 1;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--secondary);
+}
+
+header .fixed ul.modal li{
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.77rem;
+  padding-top: 0.5rem;
+}
+
+header .fixed ul.modal li a{
+  font-size: 1rem;
+}
+
+
+
+header .fixed ul.modal li:last-child{
+  border-bottom: none;
+}
+
+header .fixed ul.modal li:first-child{
+  border-bottom: none;
+  text-align: right;
+  padding-bottom: 0;
+  padding-top: 0.1rem;
+}
+
+/* =============================
+      4- Media Query
+   ============================= 
+*/
+
+@media screen and (max-width: 700px) {
+
+  header.flex nav{
+    display: none;
+  }
+
+  header button.menu{
+    display: block;
+  }
+  
+}
