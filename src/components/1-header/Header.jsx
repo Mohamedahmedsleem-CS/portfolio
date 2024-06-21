@@ -37,7 +37,7 @@ export const Header = () => {
         <div className=" fixed">   
         <ul className="modal ">
           <li>
-            <button className='icon-clear' onClick={() => {setshowModal(false)}} />
+            <button className='icon-close' onClick={() => {setshowModal(false)}} />
           </li>
           <li>
             <a href="">About</a>
