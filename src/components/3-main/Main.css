@@ -1,0 +1,161 @@
+/* =======================
+   table of contents
+   =======================
+   1- Left Section ==> Buttons
+   2- Right Section ==> Card
+   3- Responsive Design == >  Media Query
+ */
+
+
+
+main.flex{
+  gap: 2.6rem;
+  align-items: start;
+}
+
+/* =======================
+    1-Left Section 
+   =======================
+*/
+
+main.flex section.left-section.flex{
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+main.flex section.left-section.flex button {
+  background-color: rgba(36,37,46,1);
+  width: 11rem;
+  padding: 0.75rem 0;
+  text-align: center;
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+main.flex section.left-section.flex button:hover{
+  opacity: 1;
+}
+
+main.flex section.left-section.flex button.active{
+  opacity: 1;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  padding: 0.8rem 0;
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+}
+
+
+
+
+/* =======================
+    2-Right Section
+   =======================
+*/
+
+main.flex section.right-section{
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+}
+.card{
+  border:1px solid rgba(93,188,252,0.3);
+  transition: 0.3s;
+  border-radius: 5px;
+  background-image: linear-gradient(rgba(154,188,188, 0.05),rgba(255, 255, 255, 0.05));
+}
+
+.card:hover{
+  border:1px solid var(--blue);
+  transform: rotate(0.8deg);
+  scale: 1.03;
+  cursor: pointer;
+  background-image: linear-gradient(rgba(255,255,255, 0.2),rgba(255,255,255, 0.0));
+}
+
+.card img{
+  border-radius: 5px;
+}
+
+
+.card .box{
+  padding: 1rem 0.4rem;
+}
+
+.card .box .title {
+  color: var(--title);
+}
+
+.card .box .sub-title{
+  
+  color: var(--subtitle);
+  font-size: 0.8rem;
+  margin-top: 0.7rem;
+  margin-bottom: 1.1rem;
+}
+
+.card .box .icons{
+  justify-content: space-between;
+
+}
+ .card .icon-link,
+ .card .icon-github{
+  color:var(--subtitle) ;
+  font-size: 1.2rem;
+  transition: 0.3s;
+
+}
+
+.card .icon-link:hover,
+.card .icon-github:hover{
+  color: var(--icon-hover);
+  font-size: 1.22rem;
+}
+
+.card a.link{
+  margin-right: 18px;
+  font-size: 0.9rem;
+  color: var(--blue);
+}
+
+.card a.link span{
+  align-self: self-end;
+}
+
+
+/* ==============================================
+   3- Responsive Design == >  Media Query
+   ==============================================
+*/
+
+@media screen and (max-width: 600px) {
+  main.flex{
+    flex-direction: column;
+    gap: 2.64rem;
+    align-items: center;
+  }
+
+  main.flex section.left-section.flex{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-left: 30px;
+  
+  }
+
+  main.flex section.left-section.flex button {
+    width: 7rem;
+    padding: 0.8rem 0;
+    font-size: 0.9rem;
+  }
+
+}
+
+
+
+
