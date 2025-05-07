@@ -10,6 +10,7 @@ function App() {
 
   return (
     <div className='container' >
+      <h1>بسم الله الرحمن الرحيم</h1>
       <Header/>
       <Hero/>
       <div className='divider' />
