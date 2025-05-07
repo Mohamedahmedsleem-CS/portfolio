@@ -19,7 +19,7 @@ function Main() {
               <img
                 className=""
                 width={266}
-                src="public/resturant.jpeg"
+                src="/public/resturant.jpeg"
                 alt="resturant"
               />
               <div className="box  " style={{ width: "266px" }}>
